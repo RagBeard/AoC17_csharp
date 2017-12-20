@@ -10,6 +10,8 @@ namespace AoC17.Tools
 	{
 		private static CodeInput instance;
 
+		private Fetcher fetcher = new Fetcher();
+
 		private CodeInput() { }
 
 		public static CodeInput Instance
@@ -22,6 +24,25 @@ namespace AoC17.Tools
 				}
 				return instance;
 			}
+		}
+
+		public List<int> GetListFromWeb(string url, string input, char separator)
+		{
+			var result = new List<int>();
+
+
+			try
+			{
+				var asdf = fetcher.FetchFrom(url);
+
+				result = input.Split(separator).Select(int.Parse).ToList();
+			}
+			catch
+			{
+				throw;
+			}
+
+			return result;
 		}
 
 		public List<int> GetList(string input, char separator)
