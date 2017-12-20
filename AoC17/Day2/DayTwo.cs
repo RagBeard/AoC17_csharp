@@ -15,7 +15,11 @@ namespace AoC17.Day2
 		public int CalcRow(List<int> row)
 		{
 			//return diff of highest and lowest in row
-			return 3;
+
+			var min = row.Min();
+			var max = row.Max();
+
+			return max - min;
 		}
 
 		public int GetChecksum(List<int>[] input)
