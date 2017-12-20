@@ -20,8 +20,9 @@ namespace AoC17.Day2
 			string input3 = "2 4 6 8";
 
 
+			//result = input.Split('\n').ToList();
 
-			var result = ci.GetList(input3, ' ');
+			
 
 			//Console.WriteLine(result[1]);
 
