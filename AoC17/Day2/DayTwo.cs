@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AoC17.Day2
+{
+	public class DayTwo
+	{
+
+		public DayTwo()	{	}
+
+		//making this public for the sake of unit testing.
+		public int CalcRow(List<int> row)
+		{
+			//return diff of highest and lowest in row
+			return 3;
+		}
+
+		public int GetChecksum(List<int>[] input)
+		{
+			// perform CalcRow for each row, add all results.
+			return 4;
+		}
+	}
+}

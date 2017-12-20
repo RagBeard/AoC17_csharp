@@ -15,10 +15,13 @@ namespace AoC17.Day2
 		public static void Main()
 		{
 			CodeInput ci = CodeInput.Instance;
-			string input = null;
-			
+			string input1 = "5 1 9 5";
+			string input2 = "7 5 3";
+			string input3 = "2 4 6 8";
 
-			var result = ci.GetList(input, ' ');
+
+
+			var result = ci.GetList(input3, ' ');
 
 			//Console.WriteLine(result[1]);
 

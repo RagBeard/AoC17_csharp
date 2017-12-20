@@ -14,12 +14,6 @@ namespace AoC17.Tools.Tests
 		CodeInput ci = CodeInput.Instance;
 		string input = "";
 
-		[TestMethod()]
-		public void GetListTest()
-		{
-			Assert.Fail();
-		}
-
 
 		[ExpectedException(typeof(FormatException))]
 		[TestMethod()]
