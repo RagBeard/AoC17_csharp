@@ -24,8 +24,14 @@ namespace AoC17.Day2
 
 		public int GetChecksum(List<int>[] input)
 		{
-			// perform CalcRow for each row, add all results.
-			return 4;
+			var sum = 0;
+			
+			foreach (var row in input)
+			{
+				sum += CalcRow(row);
+			}
+
+			return sum;
 		}
 	}
 }
