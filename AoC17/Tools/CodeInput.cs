@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace AoC17.Tools
@@ -46,13 +47,15 @@ namespace AoC17.Tools
 			return result;
 		}
 
+		//returns a list of values from a <separator> separated string of values in <input>
 		public List<int> GetList(string input, char separator)
 		{
 			var result = new List<int>();
 
 			try
 			{
-				result = input.Split(separator).Select(int.Parse).ToList();
+				//handles empty strings (when separator repeats)
+				result = input.Split(separator).Where(s => s.Length > 0).Select(int.Parse).ToList();
 			}
 			catch
 			{
@@ -62,5 +65,27 @@ namespace AoC17.Tools
 			return result;
 		}
 
+		//returns an array of lists, containing values from a <separator> separated string of values in <input>
+		public List<int>[] GetMatrix(string [] input, char separator)
+		{
+
+			List<int>[] result = new List<int>[input.Length];
+
+			try
+			{
+				int i = 0;
+				foreach (var str in input)
+				{
+					result[i] = GetList(str, separator);
+				}
+				
+			}
+			catch
+			{
+				throw;
+			}
+
+			return result;
+		}
 	}
 }
