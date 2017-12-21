@@ -10,9 +10,9 @@ namespace AoC17.Day2
 {
 	class Program
 	{
-		string[] input =
+		static string[] input =
 		{
-			"414 382 1515    319 83  1327    116 391 101 749 1388    1046    1427    105 1341    1590",
+			"414 382 1515 319 83  1327    116 391 101 749 1388    1046    1427    105 1341    1590",
 			"960 930 192 147 932 621 1139    198 865 820 597 165 232 417 19  183",
 			"3379    987 190 3844    1245    1503    3151    3349    2844    4033    175 3625    3565    179 3938    184",
 			"116 51  32  155 102 92  65  42  48  91  74  69  52  89  20  143",
@@ -34,9 +34,14 @@ namespace AoC17.Day2
 		{
 			CodeInput ci = CodeInput.Instance;
 			DayTwo dayTwo = new DayTwo();
-			
-			
-			
+
+
+			var checksum = dayTwo.GetChecksum(ci.GetMatrix(input, ' '));
+			//Star 1 answer: 30994
+
+
+			Console.WriteLine(checksum);
+
 
 			Console.Read();
 

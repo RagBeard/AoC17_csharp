@@ -70,13 +70,14 @@ namespace AoC17.Tools
 		{
 
 			List<int>[] result = new List<int>[input.Length];
-
+			
 			try
 			{
 				int i = 0;
 				foreach (var str in input)
 				{
 					result[i] = GetList(str, separator);
+					i++;
 				}
 				
 			}
