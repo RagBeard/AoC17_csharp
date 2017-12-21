@@ -33,5 +33,36 @@ namespace AoC17.Day2
 
 			return sum;
 		}
+
+		private int CalcRowDivisible(List<int> row)
+		{
+			//find the only two numbers on each row where one is evenly divisible with the other
+			int result = 0;
+
+			foreach( var val in row)
+			{
+				var r = row.Where((v) => (v != val) && (v % val == 0));
+
+				if (r.Count() > 0)
+				{
+					result = r.First() / val;
+					break;
+				}
+			}
+
+			return result;
+		}
+
+		public int GetSecondChecksum(List<int>[] input)
+		{
+			var sum = 0;
+
+			foreach (var row in input)
+			{
+				sum += CalcRowDivisible(row);
+			}
+
+			return sum;
+		}
 	}
 }

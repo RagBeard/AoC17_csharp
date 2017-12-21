@@ -38,10 +38,14 @@ namespace AoC17.Day2
 
 			var checksum = dayTwo.GetChecksum(ci.GetMatrix(input, ' '));
 			//Star 1 answer: 30994
-
-
+			
 			Console.WriteLine(checksum);
 
+
+			var checksum2 = dayTwo.GetSecondChecksum(ci.GetMatrix(input, ' '));
+
+			Console.WriteLine(checksum2);
+			//Star 1 answer: 233
 
 			Console.Read();
 
