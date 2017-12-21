@@ -26,7 +26,8 @@ namespace AoC17.Tools
 			}
 		}
 
-		public List<int> GetListFromWeb(string url, string input, char separator)
+		//Doesnt work for AoC input files because it's behind authentication...
+		private List<int> GetListFromWeb(string url, string input, char separator)
 		{
 			var result = new List<int>();
 
